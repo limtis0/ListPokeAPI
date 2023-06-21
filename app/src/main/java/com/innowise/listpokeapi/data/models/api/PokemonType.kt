@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.data.models
+package com.innowise.listpokeapi.data.models.api
 
 enum class PokemonType {
     Normal,
