@@ -18,5 +18,6 @@ enum class PokemonType {
     Dark,
     Dragon,
     Steel,
-    Fairy
+    Fairy,
+    Unknown
 }
