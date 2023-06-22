@@ -3,8 +3,8 @@ package com.innowise.listpokeapi.infrastructure.api
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
-import com.innowise.listpokeapi.data.models.api.PokemonNameUrlList
-import com.innowise.listpokeapi.data.models.api.PokemonWrapper
+import com.innowise.listpokeapi.data.api.PokemonNameUrlList
+import com.innowise.listpokeapi.data.api.PokemonDTO
 
 interface PokeAPI {
     @GET("pokemon/")
@@ -16,5 +16,5 @@ interface PokeAPI {
     @GET("pokemon/{id}/")
     suspend fun getSinglePokemon(
         @Path("id") id: Int
-    ): PokemonWrapper
+    ): PokemonDTO
 }

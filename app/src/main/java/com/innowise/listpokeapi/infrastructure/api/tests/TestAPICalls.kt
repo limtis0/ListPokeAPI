@@ -1,7 +1,7 @@
 package com.innowise.listpokeapi.infrastructure.api.tests
 
-import com.innowise.listpokeapi.data.models.api.PokemonNameUrlList
-import com.innowise.listpokeapi.data.models.api.PokemonWrapper
+import com.innowise.listpokeapi.data.api.PokemonNameUrlList
+import com.innowise.listpokeapi.data.api.PokemonDTO
 import com.innowise.listpokeapi.infrastructure.api.PokeAPI
 import com.innowise.listpokeapi.infrastructure.di.DaggerApplicationComponent
 import kotlinx.coroutines.Dispatchers
@@ -18,8 +18,8 @@ class TestAPICalls {
 
     @Before
     fun setup() {
-        val diTestComponent = DaggerApplicationComponent.create()
-        diTestComponent.inject(this)
+        val diAppComponent = DaggerApplicationComponent.create()
+        diAppComponent.inject(this)
     }
 
     @Test
@@ -36,11 +36,13 @@ class TestAPICalls {
 
     @Test
     fun testGetSinglePokemon() {
-        val pokemon: PokemonWrapper
+        // Act
+        val pokemon: PokemonDTO
         runBlocking(Dispatchers.IO) {
             pokemon = pokeAPI.getSinglePokemon(1)
         }
 
+        // Assert
         assertNotNull(pokemon)
         assertEquals("bulbasaur", pokemon.name)
         assertEquals(7, pokemon.height)

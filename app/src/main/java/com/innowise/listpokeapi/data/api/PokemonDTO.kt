@@ -1,6 +1,6 @@
-package com.innowise.listpokeapi.data.models.api
+package com.innowise.listpokeapi.data.api
 
-data class PokemonWrapper (
+data class PokemonDTO (
     val name: String,
     val height: Int,
     val weight: Int,

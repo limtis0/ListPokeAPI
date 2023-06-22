@@ -1,4 +1,6 @@
-package com.innowise.listpokeapi.data.models.api
+package com.innowise.listpokeapi.data.api
+
+import com.innowise.listpokeapi.data.api.PokemonNameUrl
 
 data class PokemonNameUrlList(
     val count: Int,
