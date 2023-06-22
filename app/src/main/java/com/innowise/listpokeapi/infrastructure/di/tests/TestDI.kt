@@ -1,4 +1,4 @@
-package tests.infrastructure.di
+package com.innowise.listpokeapi.infrastructure.di.tests
 
 import com.innowise.listpokeapi.infrastructure.api.PokeAPI
 import org.junit.Assert.assertNotNull
