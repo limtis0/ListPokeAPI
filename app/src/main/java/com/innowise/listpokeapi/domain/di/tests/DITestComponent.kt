@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.infrastructure.di.tests
+package com.innowise.listpokeapi.domain.di.tests
 
 import dagger.Component
 import javax.inject.Singleton

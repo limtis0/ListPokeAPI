@@ -1,6 +1,6 @@
-package com.innowise.listpokeapi.infrastructure.di
+package com.innowise.listpokeapi.domain.di
 
-import com.innowise.listpokeapi.infrastructure.api.PokeAPI
+import com.innowise.listpokeapi.domain.api.PokeAPI
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

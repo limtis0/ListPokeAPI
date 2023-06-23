@@ -58,13 +58,24 @@ dependencies {
     implementation 'javax.inject:javax.inject:1'
 
     testImplementation "com.google.dagger:dagger:$dagger_ver"
-    // androidTestApt "com.google.dagger:dagger-compiler:$dagger_ver"
-    // testApt "com.google.dagger:dagger-compiler:$dagger_ver"
     testAnnotationProcessor "com.google.dagger:dagger-compiler:$dagger_ver"
     androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$dagger_ver"
     kaptAndroidTest "com.google.dagger:dagger-compiler:$dagger_ver"
     kaptTest "com.google.dagger:dagger-compiler:$dagger_ver"
     androidTestImplementation "com.google.dagger:dagger-android-support:$dagger_ver"
+
+    def room_version = "2.5.2"
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-paging:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    def paging_version = "3.1.1"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+
+    def lifecycle_version = "2.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 }
 
 kapt {

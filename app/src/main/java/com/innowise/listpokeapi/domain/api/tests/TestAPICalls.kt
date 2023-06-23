@@ -1,9 +1,9 @@
-package com.innowise.listpokeapi.infrastructure.api.tests
+package com.innowise.listpokeapi.domain.api.tests
 
 import com.innowise.listpokeapi.data.api.PokemonNameUrlList
 import com.innowise.listpokeapi.data.api.PokemonDTO
-import com.innowise.listpokeapi.infrastructure.api.PokeAPI
-import com.innowise.listpokeapi.infrastructure.di.DaggerApplicationComponent
+import com.innowise.listpokeapi.domain.api.PokeAPI
+import com.innowise.listpokeapi.domain.di.DaggerApplicationComponent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*

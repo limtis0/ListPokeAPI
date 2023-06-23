@@ -5,7 +5,7 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
-import com.innowise.listpokeapi.infrastructure.api.SimplePokeAPI
+import com.innowise.listpokeapi.domain.api.SimplePokeAPI
 import retrofit2.HttpException
 import java.io.IOException
 

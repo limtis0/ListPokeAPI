@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.infrastructure.api
+package com.innowise.listpokeapi.domain.api
 
 import retrofit2.http.GET
 import retrofit2.http.Path

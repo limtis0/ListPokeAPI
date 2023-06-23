@@ -1,8 +1,8 @@
-package com.innowise.listpokeapi.infrastructure.api;
+package com.innowise.listpokeapi.domain.api;
 
 import com.innowise.listpokeapi.data.local.PokemonEntity
 import com.innowise.listpokeapi.data.mappers.toEntity
-import com.innowise.listpokeapi.infrastructure.di.DaggerApplicationComponent
+import com.innowise.listpokeapi.domain.di.DaggerApplicationComponent
 import javax.inject.Inject;
 
 class SimplePokeAPI {

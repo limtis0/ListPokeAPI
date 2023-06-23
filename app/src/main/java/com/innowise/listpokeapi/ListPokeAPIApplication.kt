@@ -1,8 +1,8 @@
 package com.innowise.listpokeapi
 
 import android.app.Application
-import com.innowise.listpokeapi.infrastructure.di.ApplicationComponent
-import com.innowise.listpokeapi.infrastructure.di.DaggerApplicationComponent
+import com.innowise.listpokeapi.domain.di.ApplicationComponent
+import com.innowise.listpokeapi.domain.di.DaggerApplicationComponent
 
 
 class ListPokeAPIApplication : Application() {
