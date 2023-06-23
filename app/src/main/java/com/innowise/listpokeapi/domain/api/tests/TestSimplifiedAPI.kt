@@ -38,4 +38,22 @@ class TestSimplifiedAPI {
         // Assert
         assertEquals(venusaur, pokemons[2])
     }
+
+    @Test
+    fun testGetSecondPokemonsPage() {
+        // Act
+        val pokemons = runBlocking { pokeAPI.getPokemonsPage(1, 3) }
+
+        // Assert
+        assertEquals("Charmander", pokemons[0].name)
+    }
+
+    @Test
+    fun testGetNonexistentPokemonsPage() {
+        // Act
+        val pokemons = runBlocking { pokeAPI.getPokemonsPage(100, 20) }
+
+        // Assert
+        assertTrue(pokemons.isEmpty())
+    }
 }
