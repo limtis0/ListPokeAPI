@@ -1,6 +1,7 @@
 package com.innowise.listpokeapi.data.api
 
-data class PokemonDTO (
+data class PokemonDTO(
+    val id: Int,
     val name: String,
     val height: Int,
     val weight: Int,
