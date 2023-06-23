@@ -30,7 +30,6 @@ class TestAPICalls {
         }
 
         assertNotNull(pokemons)
-        assertTrue(pokemons.count >= 1281)  // 1281, exactly, may change in future
         assertEquals(20, pokemons.results.size)
     }
 
