@@ -7,9 +7,9 @@ import com.innowise.listpokeapi.data.local.PokemonType
 fun PokemonDTO.toEntity() : PokemonEntity {
     return PokemonEntity(
         id,
-        name,
+        name.replaceFirstChar { it.uppercase() },
         sprites.front_default,
-        types.map { PokemonType.valueOf(it.type.name) },
+        types.map { PokemonType.valueOf(it.type.name.uppercase()) },
         weight.toDouble() / 10,
         height.toDouble() * 10,
     )

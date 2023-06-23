@@ -24,11 +24,13 @@ class TestAPICalls {
 
     @Test
     fun testGetPokemons() {
+        // Act
         val pokemons: PokemonNameUrlList
         runBlocking(Dispatchers.IO) {
             pokemons = pokeAPI.getPokemons(20, 0)
         }
 
+        // Assert
         assertNotNull(pokemons)
         assertEquals(20, pokemons.results.size)
     }
