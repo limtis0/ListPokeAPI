@@ -29,7 +29,7 @@ class RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideSimplePokemonApi(pokeAPI: PokeAPI): SimplePokeAPI {
+    fun provideSimplePokemonApi(): SimplePokeAPI {
         return SimplePokeAPI()
     }
 }

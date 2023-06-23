@@ -29,9 +29,9 @@ class PokemonAPIMediator(
                 LoadType.APPEND -> {
                     val lastItem = state.lastItemOrNull()
                     if (lastItem == null) {
-                        1
+                        0
                     } else {
-                        (lastItem.id / state.config.pageSize) + 1  // TODO: Fix wrong paging?
+                        lastItem.id / state.config.pageSize
                     }
                 }
             }
