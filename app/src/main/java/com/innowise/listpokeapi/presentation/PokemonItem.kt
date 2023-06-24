@@ -1,15 +1,21 @@
 package com.innowise.listpokeapi.presentation
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -27,17 +33,28 @@ fun PokemonItem(
 ) {
     Card(
         modifier = modifier
-            .fillMaxSize(),
+            .aspectRatio(1f),
         elevation = 4.dp
     ) {
         Column {
-            AsyncImage(
-                model = pokemon.sprite,
-                contentDescription = pokemon.name,
+            Box(
+                contentAlignment = Alignment.Center,
                 modifier = Modifier
                     .fillMaxHeight(0.75f)
-                    .align(Alignment.CenterHorizontally)
-            )
+                    .fillMaxWidth()
+                    .background(
+                        color = pokemonTypeToColor.getOrDefault(pokemon.types[0], Color.LightGray),
+                        shape = RectangleShape
+                    )
+            ) {
+                AsyncImage(
+                    model = pokemon.sprite,
+                    contentDescription = pokemon.name,
+                    contentScale = ContentScale.FillHeight,
+                    modifier = Modifier
+                        .fillMaxHeight()
+                )
+            }
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier.fillMaxSize()

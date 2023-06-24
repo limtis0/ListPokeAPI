@@ -2,6 +2,7 @@ package com.innowise.listpokeapi.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
+// TODO: Darken the color scheme
 val primaryRedWhite = Color(0xFFFF0000)
 val primaryVariantRedWhite = Color(0xFFFF3333)
 val secondaryRedWhite = Color(0xFFFF6666)
