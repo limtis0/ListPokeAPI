@@ -2,7 +2,6 @@ package com.innowise.listpokeapi.presentation.theme
 
 import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
@@ -12,15 +11,15 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 
 private val darkColorPalette = darkColors(
-    primary = primaryRedDark,
-    primaryVariant = primaryVariantRedDark,
-    secondary = secondaryRedDark
+    primary = primaryRed,
+    primaryVariant = primaryVariantRed,
+    secondary = secondaryRed
 )
 
 private val lightColorPalette = lightColors(
-    primary = primaryRedWhite,
-    primaryVariant = primaryVariantRedWhite,
-    secondary = secondaryRedWhite
+    primary = primaryRed,
+    primaryVariant = primaryVariantRed,
+    secondary = secondaryRed
 )
 
 @Composable
