@@ -11,6 +11,8 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
+const val PAGE_SIZE = 20
+
 @Module
 class PokemonPagerModule {
     @OptIn(ExperimentalPagingApi::class)
@@ -19,7 +21,7 @@ class PokemonPagerModule {
     fun providePokemonPager(pokemonDB: PokemonDB, pokemonAPI: SimplePokeAPI):
             Pager<Int, PokemonEntity> {
         return Pager(
-            config = PagingConfig(20),
+            config = PagingConfig(PAGE_SIZE),
             remoteMediator = PokemonAPIMediator(
                 pokemonDB = pokemonDB,
                 pokemonAPI = pokemonAPI

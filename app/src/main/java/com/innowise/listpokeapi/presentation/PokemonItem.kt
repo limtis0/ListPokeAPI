@@ -27,7 +27,7 @@ fun PokemonItem(
 ) {
     Card(
         modifier = modifier
-            .size(150.dp),
+            .fillMaxSize(),
         elevation = 4.dp
     ) {
         Column {
