@@ -12,7 +12,7 @@ import java.io.IOException
 @OptIn(ExperimentalPagingApi::class)
 class PokemonAPIMediator(
     private val pokemonDB: PokemonDB,
-    private val simplePokeAPI: SimplePokeAPI
+    private val pokemonAPI: SimplePokeAPI
 ) : RemoteMediator<Int, PokemonEntity>() {
 
     override suspend fun load(
@@ -37,7 +37,7 @@ class PokemonAPIMediator(
             }
 
             // Getting the pokemons
-            val pokemons = simplePokeAPI.getPokemonsPage(loadKey, state.config.pageSize)
+            val pokemons = pokemonAPI.getPokemonsPage(loadKey, state.config.pageSize)
 
             pokemonDB.withTransaction {
                 if (loadType == LoadType.REFRESH) {

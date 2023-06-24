@@ -27,7 +27,7 @@ fun PokemonItem(
 ) {
     Card(
         modifier = modifier
-            .size(100.dp),
+            .size(150.dp),
         elevation = 4.dp
     ) {
         Column {
@@ -36,8 +36,8 @@ fun PokemonItem(
                 contentDescription = pokemon.name,
                 modifier = Modifier
                     .fillMaxHeight(0.75f)
+                    .align(Alignment.CenterHorizontally)
             )
-
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier.fillMaxSize()
