@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Intent
 import com.innowise.listpokeapi.domain.di.ApplicationComponent
 import com.innowise.listpokeapi.domain.di.DaggerApplicationComponent
-import com.innowise.listpokeapi.domain.di.PokemonDBModule
+import com.innowise.listpokeapi.domain.di.modules.PokemonDBModule
 
 
 class ListPokeAPIApplication : Application() {

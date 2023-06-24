@@ -5,6 +5,10 @@ import com.innowise.listpokeapi.MainActivity
 import com.innowise.listpokeapi.domain.api.SimplePokeAPI
 import com.innowise.listpokeapi.domain.api.tests.TestAPICalls
 import com.innowise.listpokeapi.domain.api.tests.TestSimplifiedAPI
+import com.innowise.listpokeapi.domain.di.modules.PokemonAPIModule
+import com.innowise.listpokeapi.domain.di.modules.PokemonDBModule
+import com.innowise.listpokeapi.domain.di.modules.PokemonPagerModule
+import com.innowise.listpokeapi.domain.di.modules.RetrofitModule
 import dagger.Component
 import javax.inject.Singleton
 

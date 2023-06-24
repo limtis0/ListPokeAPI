@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.domain.di
+package com.innowise.listpokeapi.domain.di.modules
 
 import com.innowise.listpokeapi.domain.api.PokeAPI
 import com.innowise.listpokeapi.domain.api.SimplePokeAPI

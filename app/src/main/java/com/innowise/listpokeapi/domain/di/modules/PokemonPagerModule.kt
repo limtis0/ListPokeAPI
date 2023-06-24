@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.domain.di
+package com.innowise.listpokeapi.domain.di.modules
 
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
