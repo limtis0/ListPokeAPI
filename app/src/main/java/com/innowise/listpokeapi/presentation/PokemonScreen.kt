@@ -27,7 +27,7 @@ fun PokemonScreen(
         if (pokemons.loadState.refresh is LoadState.Error) {
             Toast.makeText(
                 context,
-                "Error: " + (pokemons.loadState.refresh as LoadState.Error).error.message,
+                "Error: ${(pokemons.loadState.refresh as LoadState.Error).error.message}",
                 Toast.LENGTH_LONG
             ).show()
         }
