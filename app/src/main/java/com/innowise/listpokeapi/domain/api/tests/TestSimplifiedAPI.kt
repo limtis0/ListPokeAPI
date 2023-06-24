@@ -8,15 +8,19 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
+import org.mockito.Mockito
 import javax.inject.Inject
 
 class TestSimplifiedAPI {
     @Inject
-    lateinit var pokeAPI: SimplePokeAPI
+    lateinit var pokemonAPI: SimplePokeAPI
 
     @Before
     fun setup() {
-        val diAppComponent = DaggerApplicationComponent.create()
+        val diAppComponent = DaggerApplicationComponent.builder()
+            .pokemonDBModule(Mockito.mock())
+            .build()
+
         diAppComponent.inject(this)
     }
 
@@ -33,7 +37,7 @@ class TestSimplifiedAPI {
         )
 
         // Act
-        val pokemons = runBlocking { pokeAPI.getPokemonsPage(0, 3) }
+        val pokemons = runBlocking { pokemonAPI.getPokemonsPage(0, 3) }
 
         // Assert
         assertEquals(venusaur, pokemons[2])
@@ -42,7 +46,7 @@ class TestSimplifiedAPI {
     @Test
     fun testGetSecondPokemonsPage() {
         // Act
-        val pokemons = runBlocking { pokeAPI.getPokemonsPage(1, 3) }
+        val pokemons = runBlocking { pokemonAPI.getPokemonsPage(1, 3) }
 
         // Assert
         assertEquals("Charmander", pokemons[0].name)
@@ -51,7 +55,7 @@ class TestSimplifiedAPI {
     @Test
     fun testGetNonexistentPokemonsPage() {
         // Act
-        val pokemons = runBlocking { pokeAPI.getPokemonsPage(100, 20) }
+        val pokemons = runBlocking { pokemonAPI.getPokemonsPage(100, 20) }
 
         // Assert
         assertTrue(pokemons.isEmpty())

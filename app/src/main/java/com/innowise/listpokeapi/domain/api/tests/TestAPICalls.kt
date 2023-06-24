@@ -9,6 +9,7 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
+import org.mockito.Mockito
 import javax.inject.Inject
 
 // Testing whether API calls are working as intended
@@ -18,7 +19,9 @@ class TestAPICalls {
 
     @Before
     fun setup() {
-        val diAppComponent = DaggerApplicationComponent.create()
+        val diAppComponent = DaggerApplicationComponent.builder()
+            .pokemonDBModule(Mockito.mock())
+            .build()
         diAppComponent.inject(this)
     }
 
