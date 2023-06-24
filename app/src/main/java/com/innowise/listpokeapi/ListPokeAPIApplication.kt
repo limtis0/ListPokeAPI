@@ -1,15 +1,26 @@
 package com.innowise.listpokeapi
 
 import android.app.Application
+import android.content.Intent
 import com.innowise.listpokeapi.domain.di.ApplicationComponent
 import com.innowise.listpokeapi.domain.di.DaggerApplicationComponent
+import com.innowise.listpokeapi.domain.di.PokemonDBModule
 
 
 class ListPokeAPIApplication : Application() {
-    lateinit var applicationComponent: ApplicationComponent
+    companion object {
+        lateinit var appComponent: ApplicationComponent
+    }
 
     override fun onCreate() {
         super.onCreate()
-        applicationComponent = DaggerApplicationComponent.create()
+
+         appComponent = DaggerApplicationComponent.builder()
+             .pokemonDBModule(PokemonDBModule(applicationContext))
+             .build()
+
+        val intent = Intent(applicationContext, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
     }
 }
