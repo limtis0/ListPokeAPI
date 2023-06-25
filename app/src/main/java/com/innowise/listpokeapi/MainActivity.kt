@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.paging.Pager
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.innowise.listpokeapi.data.local.PokemonEntity
-import com.innowise.listpokeapi.presentation.PokemonScreen
+import com.innowise.listpokeapi.presentation.screens.PokemonScreen
 import com.innowise.listpokeapi.presentation.PokemonViewModel
 import com.innowise.listpokeapi.presentation.theme.ListPokeAPITheme
 import javax.inject.Inject

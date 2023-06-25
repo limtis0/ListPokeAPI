@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.presentation
+package com.innowise.listpokeapi.presentation.screens
 
 import android.widget.Toast
 import androidx.compose.foundation.clickable
@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import com.innowise.listpokeapi.data.local.PokemonEntity
+import com.innowise.listpokeapi.presentation.PokemonItem
 
 @Composable
 fun PokemonScreen(

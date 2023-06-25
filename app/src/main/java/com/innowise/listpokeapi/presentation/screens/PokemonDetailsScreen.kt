@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.presentation
+package com.innowise.listpokeapi.presentation.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,9 +20,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.innowise.listpokeapi.ListPokeAPIApplication
 import com.innowise.listpokeapi.data.local.PokemonEntity
 import com.innowise.listpokeapi.data.local.PokemonType
+import com.innowise.listpokeapi.presentation.PokemonTypeItem
+import com.innowise.listpokeapi.presentation.pokemonTypeToColor
 import com.innowise.listpokeapi.presentation.theme.ListPokeAPITheme
 import com.innowise.listpokeapi.presentation.theme.typography
 
