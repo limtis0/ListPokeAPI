@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.innowise.listpokeapi.presentation.PokemonItem
+import com.innowise.listpokeapi.presentation.elements.PokemonItem
 import com.innowise.listpokeapi.presentation.PokemonListViewModel
 import com.innowise.listpokeapi.presentation.screens.destinations.PokemonDetailsScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination

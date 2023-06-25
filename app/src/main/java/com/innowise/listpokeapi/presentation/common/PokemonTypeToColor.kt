@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.presentation
+package com.innowise.listpokeapi.presentation.common
 
 import androidx.compose.ui.graphics.Color
 import com.innowise.listpokeapi.data.local.PokemonType

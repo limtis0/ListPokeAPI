@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.presentation
+package com.innowise.listpokeapi.presentation.elements
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.innowise.listpokeapi.data.local.PokemonEntity
 import com.innowise.listpokeapi.data.local.PokemonType
+import com.innowise.listpokeapi.presentation.common.pokemonTypeToColor
 import com.innowise.listpokeapi.presentation.theme.ListPokeAPITheme
 
 @Composable
