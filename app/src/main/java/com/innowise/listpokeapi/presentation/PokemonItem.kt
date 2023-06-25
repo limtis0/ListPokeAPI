@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.size
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -31,6 +30,8 @@ fun PokemonItem(
     pokemon: PokemonEntity,
     modifier: Modifier = Modifier
 ) {
+    val bgColor = pokemonTypeToColor.getOrDefault(pokemon.types[0], Color.LightGray)
+
     Card(
         modifier = modifier
             .aspectRatio(1f),
@@ -43,7 +44,7 @@ fun PokemonItem(
                     .fillMaxHeight(0.75f)
                     .fillMaxWidth()
                     .background(
-                        color = pokemonTypeToColor.getOrDefault(pokemon.types[0], Color.LightGray),
+                        color = bgColor,
                         shape = RectangleShape
                     )
             ) {
