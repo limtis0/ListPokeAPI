@@ -1,8 +1,11 @@
 package com.innowise.listpokeapi.data.local
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 @Entity(tableName = "pokemon")
 data class PokemonEntity(
     @PrimaryKey
@@ -12,4 +15,4 @@ data class PokemonEntity(
     val types: List<PokemonType>,
     val weightKG: Double,
     val heightCM: Double,
-)
+) : Parcelable

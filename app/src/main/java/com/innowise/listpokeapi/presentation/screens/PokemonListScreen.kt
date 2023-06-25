@@ -20,9 +20,17 @@ import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.innowise.listpokeapi.presentation.PokemonItem
 import com.innowise.listpokeapi.presentation.PokemonListViewModel
+import com.innowise.listpokeapi.presentation.screens.destinations.PokemonDetailsScreenDestination
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootNavGraph
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
+@RootNavGraph(start = true)
+@Destination
 @Composable
-fun PokemonListScreen() {
+fun PokemonListScreen(
+    navigator: DestinationsNavigator
+) {
     val viewModel: PokemonListViewModel = viewModel()
     val pokemons = viewModel.pokemonPagingFlow.collectAsLazyPagingItems()
 
@@ -57,7 +65,9 @@ fun PokemonListScreen() {
                             pokemon = pokemon,
                             modifier = Modifier
                                 .clickable {
-                                    // NAVIGATE TO DETAILS
+                                    navigator.navigate(
+                                        PokemonDetailsScreenDestination(pokemon = pokemon)
+                                    )
                                 }
                         )
                     }

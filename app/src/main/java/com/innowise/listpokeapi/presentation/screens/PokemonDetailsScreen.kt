@@ -26,7 +26,9 @@ import com.innowise.listpokeapi.presentation.PokemonTypeItem
 import com.innowise.listpokeapi.presentation.pokemonTypeToColor
 import com.innowise.listpokeapi.presentation.theme.ListPokeAPITheme
 import com.innowise.listpokeapi.presentation.theme.typography
+import com.ramcosta.composedestinations.annotation.Destination
 
+@Destination
 @Composable
 fun PokemonDetailsScreen(pokemon: PokemonEntity) {
     val bgColor = pokemonTypeToColor.getOrDefault(pokemon.types[0], Color.LightGray)
