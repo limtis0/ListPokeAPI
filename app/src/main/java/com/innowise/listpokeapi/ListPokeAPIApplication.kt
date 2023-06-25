@@ -15,10 +15,12 @@ class ListPokeAPIApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-         appComponent = DaggerApplicationComponent.builder()
+        // Set up DI component
+        appComponent = DaggerApplicationComponent.builder()
              .pokemonDBModule(PokemonDBModule(applicationContext))
              .build()
 
+        // Start the main activity
         val intent = Intent(applicationContext, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)

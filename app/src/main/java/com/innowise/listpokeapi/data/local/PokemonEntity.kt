@@ -2,7 +2,6 @@ package com.innowise.listpokeapi.data.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.TypeConverters
 
 @Entity(tableName = "pokemon")
 data class PokemonEntity(
@@ -14,4 +13,3 @@ data class PokemonEntity(
     val weightKG: Double,
     val heightCM: Double,
 )
-

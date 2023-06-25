@@ -15,15 +15,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.paging.LoadState
-import androidx.paging.compose.LazyPagingItems
-import com.innowise.listpokeapi.data.local.PokemonEntity
+import androidx.paging.compose.collectAsLazyPagingItems
 import com.innowise.listpokeapi.presentation.PokemonItem
+import com.innowise.listpokeapi.presentation.PokemonListViewModel
 
 @Composable
-fun PokemonScreen(
-    pokemons: LazyPagingItems<PokemonEntity>
-) {
+fun PokemonListScreen() {
+    val viewModel: PokemonListViewModel = viewModel()
+    val pokemons = viewModel.pokemonPagingFlow.collectAsLazyPagingItems()
+
     val context = LocalContext.current
     LaunchedEffect(key1 = pokemons.loadState) {
         if (pokemons.loadState.refresh is LoadState.Error) {
@@ -55,7 +57,7 @@ fun PokemonScreen(
                             pokemon = pokemon,
                             modifier = Modifier
                                 .clickable {
-                                    // Open pokemon details screen
+                                    // NAVIGATE TO DETAILS
                                 }
                         )
                     }
