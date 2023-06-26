@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.innowise.listpokeapi.presentation.screens.NavGraphs
-import com.innowise.listpokeapi.presentation.screens.PokemonListScreen
 import com.innowise.listpokeapi.presentation.theme.ListPokeAPITheme
 import com.ramcosta.composedestinations.DestinationsNavHost
 
