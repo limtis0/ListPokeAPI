@@ -11,7 +11,7 @@ To run the app locally, follow these steps:
 2. Open the project in your preferred development environment.
 3. Build and run the project on an emulator or physical device.
 
-Alternatively: Download pre-build APK from "Releases" page and run it on an emulator or physical device
+Alternatively: Download pre-build APK from ["Releases"](https://github.com/limtis0/ListPokeAPI/releases) page and run it on an emulator or physical device
 
 ## Showcase
 ![showcase](https://github.com/limtis0/ListPokeAPI/assets/45824078/99e4074d-88c2-45b1-90ed-32ec13117b3f)
