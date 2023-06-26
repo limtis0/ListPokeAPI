@@ -61,9 +61,11 @@ fun PokemonDetailsScreen(navigator: DestinationsNavigator, pokemon: PokemonEntit
                 AsyncImage(
                     model = pokemon.sprite,
                     contentDescription = pokemon.name,
-                    contentScale = ContentScale.FillWidth,
+                    contentScale = ContentScale.Fit,
                     modifier = Modifier
                         .fillMaxHeight()
+                        .fillMaxWidth()
+                        .size(128.dp)
                 )
             }
             Spacer(modifier = Modifier.size(16.dp))
