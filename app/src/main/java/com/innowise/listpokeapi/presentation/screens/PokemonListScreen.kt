@@ -65,7 +65,9 @@ fun PokemonListScreen(
                                 .clickable {
                                     navigator.navigate(
                                         PokemonDetailsScreenDestination(pokemon = pokemon)
-                                    )
+                                    ) {
+                                        restoreState = true
+                                    }
                                 }
                         )
                     }
