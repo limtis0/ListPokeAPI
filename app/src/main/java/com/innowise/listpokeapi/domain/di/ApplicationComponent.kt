@@ -1,9 +1,9 @@
 package com.innowise.listpokeapi.domain.di
 
 import com.innowise.listpokeapi.ListPokeAPIApplication
-import com.innowise.listpokeapi.domain.api.SimplePokeAPI
-import com.innowise.listpokeapi.domain.api.tests.TestAPICalls
-import com.innowise.listpokeapi.domain.api.tests.TestSimplifiedAPI
+import com.innowise.listpokeapi.domain.remote.SimplePokeAPI
+import com.innowise.listpokeapi.domain.remote.tests.TestAPICalls
+import com.innowise.listpokeapi.domain.remote.tests.TestSimplifiedAPI
 import com.innowise.listpokeapi.domain.di.modules.PokemonAPIModule
 import com.innowise.listpokeapi.domain.di.modules.PokemonDBModule
 import com.innowise.listpokeapi.domain.di.modules.PokemonPagerModule

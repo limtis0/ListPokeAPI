@@ -1,6 +1,6 @@
 package com.innowise.listpokeapi.data.mappers
 
-import com.innowise.listpokeapi.data.api.PokemonDTO
+import com.innowise.listpokeapi.data.remote.PokemonDTO
 import com.innowise.listpokeapi.data.local.PokemonEntity
 import com.innowise.listpokeapi.data.local.PokemonType
 

@@ -1,8 +1,8 @@
-package com.innowise.listpokeapi.domain.api.tests
+package com.innowise.listpokeapi.domain.remote.tests
 
-import com.innowise.listpokeapi.data.api.PokemonNameUrlList
-import com.innowise.listpokeapi.data.api.PokemonDTO
-import com.innowise.listpokeapi.domain.api.PokeAPI
+import com.innowise.listpokeapi.data.remote.PokemonNameUrlList
+import com.innowise.listpokeapi.data.remote.PokemonDTO
+import com.innowise.listpokeapi.domain.remote.PokeAPI
 import com.innowise.listpokeapi.domain.di.DaggerApplicationComponent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking

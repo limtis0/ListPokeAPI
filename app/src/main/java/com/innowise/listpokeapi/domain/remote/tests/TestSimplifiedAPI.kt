@@ -1,8 +1,8 @@
-package com.innowise.listpokeapi.domain.api.tests
+package com.innowise.listpokeapi.domain.remote.tests
 
 import com.innowise.listpokeapi.data.local.PokemonEntity
 import com.innowise.listpokeapi.data.local.PokemonType
-import com.innowise.listpokeapi.domain.api.SimplePokeAPI
+import com.innowise.listpokeapi.domain.remote.SimplePokeAPI
 import com.innowise.listpokeapi.domain.di.DaggerApplicationComponent
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*

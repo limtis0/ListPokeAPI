@@ -4,7 +4,7 @@ import dagger.Provides
 import javax.inject.Singleton
 import org.mockito.Mockito.mock
 import retrofit2.Retrofit
-import com.innowise.listpokeapi.domain.api.PokeAPI
+import com.innowise.listpokeapi.domain.remote.PokeAPI
 import dagger.Module
 
 @Module

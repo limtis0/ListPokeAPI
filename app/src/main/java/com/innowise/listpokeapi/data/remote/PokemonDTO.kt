@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.data.api
+package com.innowise.listpokeapi.data.remote
 
 data class PokemonDTO(
     val id: Int,

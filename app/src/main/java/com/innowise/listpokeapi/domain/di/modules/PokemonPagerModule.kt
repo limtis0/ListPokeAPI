@@ -6,7 +6,7 @@ import androidx.paging.PagingConfig
 import com.innowise.listpokeapi.data.local.PokemonAPIMediator
 import com.innowise.listpokeapi.data.local.PokemonDB
 import com.innowise.listpokeapi.data.local.PokemonEntity
-import com.innowise.listpokeapi.domain.api.SimplePokeAPI
+import com.innowise.listpokeapi.domain.remote.SimplePokeAPI
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton

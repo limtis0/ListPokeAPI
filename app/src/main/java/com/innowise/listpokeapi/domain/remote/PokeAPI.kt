@@ -1,10 +1,10 @@
-package com.innowise.listpokeapi.domain.api
+package com.innowise.listpokeapi.domain.remote
 
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
-import com.innowise.listpokeapi.data.api.PokemonNameUrlList
-import com.innowise.listpokeapi.data.api.PokemonDTO
+import com.innowise.listpokeapi.data.remote.PokemonNameUrlList
+import com.innowise.listpokeapi.data.remote.PokemonDTO
 
 interface PokeAPI {
     @GET("pokemon/")

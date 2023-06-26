@@ -1,7 +1,7 @@
 package com.innowise.listpokeapi.domain.di.modules
 
-import com.innowise.listpokeapi.domain.api.PokeAPI
-import com.innowise.listpokeapi.domain.api.SimplePokeAPI
+import com.innowise.listpokeapi.domain.remote.PokeAPI
+import com.innowise.listpokeapi.domain.remote.SimplePokeAPI
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

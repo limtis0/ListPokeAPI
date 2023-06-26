@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.domain.api
+package com.innowise.listpokeapi.domain.remote
 
 import com.innowise.listpokeapi.data.local.PokemonEntity
 import com.innowise.listpokeapi.data.mappers.toEntity

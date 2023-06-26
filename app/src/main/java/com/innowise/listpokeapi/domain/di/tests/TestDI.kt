@@ -1,6 +1,6 @@
 package com.innowise.listpokeapi.domain.di.tests
 
-import com.innowise.listpokeapi.domain.api.PokeAPI
+import com.innowise.listpokeapi.domain.remote.PokeAPI
 import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
