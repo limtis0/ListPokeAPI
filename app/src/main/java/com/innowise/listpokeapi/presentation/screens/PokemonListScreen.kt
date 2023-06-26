@@ -19,13 +19,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.innowise.listpokeapi.presentation.elements.PokemonItem
-import com.innowise.listpokeapi.presentation.PokemonListViewModel
+import com.innowise.listpokeapi.presentation.viewmodels.PokemonListViewModel
 import com.innowise.listpokeapi.presentation.screens.destinations.PokemonDetailsScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
-@RootNavGraph(start = true)
 @Destination
 @Composable
 fun PokemonListScreen(

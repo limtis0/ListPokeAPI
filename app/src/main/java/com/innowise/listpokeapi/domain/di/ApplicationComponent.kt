@@ -8,7 +8,7 @@ import com.innowise.listpokeapi.domain.di.modules.PokemonAPIModule
 import com.innowise.listpokeapi.domain.di.modules.PokemonDBModule
 import com.innowise.listpokeapi.domain.di.modules.PokemonPagerModule
 import com.innowise.listpokeapi.domain.di.modules.RetrofitModule
-import com.innowise.listpokeapi.presentation.PokemonListViewModel
+import com.innowise.listpokeapi.presentation.viewmodels.PokemonListViewModel
 import dagger.Component
 import javax.inject.Singleton
 

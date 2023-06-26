@@ -1,4 +1,4 @@
-package com.innowise.listpokeapi.presentation
+package com.innowise.listpokeapi.presentation.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

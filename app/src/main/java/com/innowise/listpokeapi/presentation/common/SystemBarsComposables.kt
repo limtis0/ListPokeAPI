@@ -17,3 +17,18 @@ fun SetTemporarySystemBarsColor(temporaryColor: Color, originalColor: Color) {
         }
     }
 }
+
+@Composable
+fun HideSystemBarsTemporary(hideStatusBar: Boolean = true, hideNavBar: Boolean = true)
+{
+    val systemUiController = rememberSystemUiController()
+
+    DisposableEffect(key1 = true){
+        systemUiController.isStatusBarVisible = !hideStatusBar
+        systemUiController.isNavigationBarVisible = !hideNavBar
+
+        onDispose {
+            systemUiController.isSystemBarsVisible = true
+        }
+    }
+}
